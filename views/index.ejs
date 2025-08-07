@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/icon" href="/favicon.ico" />
+    <title>Chess-Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script
+      src="https://cdn.socket.io/4.8.1/socket.io.min.js"
+      integrity="sha384-mkQ3/7FUtcGyoppY6bz/PORYoGqOl7/aSUMn2ymDOJcapfS6PHqxhRTMh1RR0Q6+"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"
+      integrity="sha512-xRllwz2gdZciIB+AkEbeq+gVhX8VB8XsfqeFbUh+SzHlN96dEduwtTuVuc2u9EROlmW9+yhRlxjif66ORpsgVA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div class="timer-container">
+      <div id="white-timer" class="timer-box white-timer">Black: 05:00</div>
+      <div id="black-timer" class="timer-box black-timer">White: 05:00</div>
+    </div>
+    <div class="w-full h-screen flex items-center justify-center">
+      <div id="chessboard" class="chessboard"></div>
+    </div>
+    <div id="win-message" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 z-50">
+  <div class="bg-white text-black text-3xl font-bold p-8 rounded-lg shadow-lg" id="win-text">
+    Player wins!
+  </div>
+</div>
+
+    <script src="/js/chessgame.js"></script>
+  </body>
+</html>
